@@ -51,7 +51,7 @@ img{max-width: 100%;}
     margin-right:60px;}
 #detail .content .title{
     font-size: 1.125rem;
-    font-weight:bold;}
+    font-weight: bold;}
 #detail .content dl{
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +69,7 @@ img{max-width: 100%;}
     color:#333;}
 #detail .content .link:hover{
     opacity:0.8;}
-
+  
 /* footer */
 #footer{
     font-size: 0.625rem;
