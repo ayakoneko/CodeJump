@@ -1,41 +1,35 @@
 html{font-size: 100%;}
 body{
-    color:#383e45;
+    color: 383e45;
     font-size: 0.9rem;}
-a{text-decoration: none;}
 img{max-width: 100%;}
+a{text-decoration: none;}
 li{list-style: none;}
 
 .wrapper{
-    max-width: 90%;
-    margin: 0 auto 100px;
-    padding:0 4%;
+    max-width: 960px;
+    margin: 0 auto 100px ;
+    padding: 0 4%;
     text-align: center;}
-
-.site-title{
-    width:120px;
-    line-height:1px;
-    padding: 10px 0;}
-.site-title a{
-    display:block;}
-
 .section-title{
     display: inline-block;
     font-size: 2rem;
     margin-bottom: 60px;
     border-bottom: solid 1px #383e45;}
 
-.content-title{
-    font-size: 1rem;
-    margin: 10px 0;}
-
 
 /* Header */
 #header{
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
     margin: 0 auto;}
+#header .site-title{
+    width: 120px;
+    line-height: 1px;
+    padding: 10px 0;}
+#header .site-tile a{
+    display: block;}
 #header ul{
     display: flex;
     padding: 10px 0;}
@@ -44,8 +38,7 @@ li{list-style: none;}
 #header li a{
     color: #24292e;}
 #header li a:hover{
-    opacity:0.7;}
-
+    opacity: 0.7;}
 
 /* Hero */
 #hero{
@@ -55,43 +48,43 @@ li{list-style: none;}
     max-width: 1920px;
     height: 600px;
     object-fit: cover;}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
     #hero img{
-        height: calc(100vh - 60px);}
-}
+        height: calc(100vh - 60px);}}
 
 /* About */
 #about .content{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;}
 #about img{
-    width:100px;
-    height:100px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-right: 30px;}
 #about .text{
     text-align: left;}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
     #about .content{
         flex-direction: column;}
     #about img{
-        margin-right: 0;}
-} 
+        margin-right: 0;}}
 
 /* Bicycle */
+#bicycle .content-title{
+    font-size: 1rem;
+    margin: 10px 0;}
 #bicycle ul{
-    display:flex;
+    display: flex;
     justify-content: space-between;}
 #bicycle li{
     width: 32%;}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
     #bicycle ul{
         flex-direction: column;}
     #bicycle li{
         width: 100%;
-        margin-bottom: 30px;}
-}
+        margin-bottom: 30px;}}
 
 /* Footer */
 #footer{
