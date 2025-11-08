@@ -24,7 +24,8 @@ a{color: #2b2a27;}
 
 #overview .recipe{
     width: 50%;
-    padding: 40px 5% 0 5%;}
+    padding: 40px 5% 0 5%;
+    box-sizing: border-box;}
 #overview .recipe h2{
     font-size: 1.75rem;
     margin-bottom: 20px;}
