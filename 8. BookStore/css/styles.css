@@ -1,0 +1,149 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;}
+body{
+    font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 0.875rem;
+    color: #2a2a2a;}
+img{width: 100%;}
+a{text-decoration: none;}
+a:hover{opacity: 0.7;}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;}
+.section-title{
+    font-size: 1.5rem;
+    margin-bottom: 20px;}
+.btn{
+    color: #2a2a2a;
+    border: solid 1px #2a2a2a;
+    display: inline-block;
+    font-size: 0.750rem;
+    padding: 14px 36px;
+    margin-top: 30px;}
+
+/* Hero */
+#hero{
+    height: 100vh;
+    background-image: url(../img/mainvisual.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-bottom: 80px;
+    position: relative;}
+#hero .logo{
+    position: absolute;
+    top: 30px;
+    right: 30px;}
+
+/* Magazine */
+#magazine{
+    text-align: center;
+    margin-bottom: 80px;}
+#magazine .magaazine-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;}
+#magazine .magaazine-items .items{
+    width: 49%;
+    position: relative;}
+#magazine .magaazine-items .items .text{
+    max-width: 290px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;}
+#magazine .magaazine-items .items .text .title{
+    font-size: 1.25rem;
+    margin-bottom: 2px;}
+
+/* Fashion */
+#fashion{
+    text-align: center;
+    height: 520px;
+    margin-bottom: 80px;
+    background-image: url(../img/fashion.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 60px;}
+
+/* Catalogue & Antique */
+#catalogue-antique{
+    background-color: #f5f5f5;
+    padding: 60px}
+#catalogue-antique .catalogue-antique-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+#catalogue-antique .catalogue-antique-items .image{
+    width: 48%;}
+#catalogue-antique .catalogue-antique-items .item{
+    width: 48%;
+    text-align: center;}
+#catalogue-antique .catalogue-antique-items .item p{
+    margin-bottom: 30px;
+    text-align: left;}
+#catalogue-antique .catalogue-antique-items .item p:last-child{
+    margin-bottom: 0;}
+
+/* Footer */
+#footer .footer-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color:#fff;
+    padding: 100px;
+    font-size: 0.750rem}
+#footer .footer-items .items{
+    width: 33%;
+    line-height: 2;}
+#footer .footer-items .items .title{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;}
+#footer .item li::before {
+    content: "-";
+    margin-right: 5px;}
+#footer .copyright{
+    text-align: center;}
+
+/* SP */
+@media screen and (max-width: 896px){
+    #magazine .magaazine-items{
+        flex-direction: column;}
+    #magazine .magaazine-items .items{
+        width: 100%};
+    #magazine .magaazine-item .item:first-child {
+        margin-bottom: 30px;}
+    #fashion {
+        padding-top: 35px;
+        margin-bottom: 50px;}
+    #catalogue-antique{
+        padding: 30px 0;}
+    #catalogue-antique .catalogue-antique-items{
+        flex-direction: column;}
+    #catalogue-antique .catalogue-antique-items .image{
+        width: 100%;}
+    #catalogue-antique .catalogue-antique-items .item{
+        width: 100%;}
+    #catalogue-antique .catalogue-antique-items .item:first-child {
+        margin-bottom: 60px;}
+    #footer .footer-items{
+        flex-direction: column;}
+    #footer .footer-items .items{
+        width: 100%;
+        margin-bottom: 30px;}
+    #footer .footer-items .item:first-child {
+        text-align: center;
+        padding: 0;}
+}
