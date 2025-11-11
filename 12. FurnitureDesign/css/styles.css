@@ -42,6 +42,10 @@ li{list-style: none;}
     left: 0;
     right: 0;
     z-index:10}
+#header .logo{
+    width: 180px;
+    line-height: 1px;
+    display: block;}
 #navi{
     position: fixed;
     top: 0;
@@ -117,7 +121,7 @@ li{list-style: none;}
 .link-text{
     display: block;
     text-align: center;
-    margin-top: 40p;}
+    margin-top: 40px;}
 .pagination{
     display: flex;
     justify-content: center;
@@ -163,7 +167,8 @@ li{list-style: none;}
     width: 30%;}
 #item .item-info dd{
     box-sizing: border-box;
-    width: 70%;}
+    width: 70%;
+    margin: 0;}
 
 
 /* About */
@@ -199,3 +204,33 @@ li{list-style: none;}
   width: 100%;
   height: 300px;
   border: 0;}
+
+/* SP */
+@media screen and (max-width: 900px){
+    .product-list{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px}
+    
+    #item{
+        flex-direction: column;}
+    #item .item-image{
+        width: 100%;}
+    #item .item-info{
+        width: 100%;
+        margin: 30px 0;} 
+
+    #company dl{
+        flex-direction: column;}
+    #company dt{
+        width: 100%;
+        border: none;
+        padding-bottom: 5px;}
+    #company dd{
+        width: 100%;
+        padding-top: 5px;}
+
+    #footer{
+        flex-direction: column;}
+    #footer .sns{
+        margin-bottom: 5px;}
+}
