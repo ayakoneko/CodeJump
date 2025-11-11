@@ -22,6 +22,13 @@ li{list-style: none;}
     max-width: 1360px;
     margin: 0 auto;
     padding: 0 40px;}
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;}
+.page-title{
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-bottom: 30px;}
 
 /* Header & Navi Toggle */
 #header{
@@ -111,6 +118,13 @@ li{list-style: none;}
     display: block;
     text-align: center;
     margin-top: 40p;}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;}
+.pagination li{
+    padding: 0 20px;}
+
 
 /* Footer */
 #footer{
@@ -127,3 +141,61 @@ li{list-style: none;}
     margin-right: 30px;}
 #footer .copyright{
     font-size: 0.625rem;}
+
+/* Item */
+#item{
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;}
+#item .item-image{
+    width: 50%;}
+#item .item-info{
+    width: 42%;}
+#item .item-info p{
+    margin-bottom: 30px;
+    text-align: justify;}
+#item .item-info dl{
+    display: flex;
+    flex-wrap: wrap;}
+#item .item-info dt{
+    box-sizing: border-box;
+    width: 30%;}
+#item .item-info dd{
+    box-sizing: border-box;
+    width: 70%;}
+
+
+/* About */
+#about{
+    max-width: 600px;}
+#about p{
+    line-height: 1.9;
+    margin-bottom: 30px;}
+
+/* Company */
+#company{
+    max-width: 600px;}
+#company dl{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0;}
+#company dt{
+    width: 30%;}
+#company dd{
+    width: 70%;}
+#company dt,
+#company dd{
+    box-sizing: border-box;
+    border-bottom: solid 1px #dcdbdb;
+    margin: 0;
+    padding: 20px 10px;}
+#company dt:last-of-type,
+#company dd:last-of-type{
+    margin-bottom: 0;}
+#company .company-location {
+  filter: grayscale(1);}
+#company .company-location  iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;}
