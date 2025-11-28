@@ -154,11 +154,11 @@ export function renderOrderSummary(){
   function handleUpdateQuantity(productId, quantityInput){
     const newQuantity = Number(quantityInput.value);
 
-    if (newQuantity < 0 || newQuantity >= 1000){
+    if (newQuantity <= 0 || newQuantity >= 1000){
       alert('Quantity must be at least 0 and less than 1000')
       return;
     }
-    updateCartQuantity(productId, newQuantity);
+    updateQuantity(productId, newQuantity);
     
     const container = document.querySelector(`.js-cart-item-container-${productId}`);
     container.classList.remove("is-editing-quantity");
