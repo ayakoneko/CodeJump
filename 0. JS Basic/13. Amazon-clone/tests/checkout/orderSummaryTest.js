@@ -35,10 +35,14 @@ describe('test suite: renderOrderSummary', () => {
         renderOrderSummary();
     });
 
+    afterEach(() => {
+        document.querySelector('.js-test-container').innerHTML = '';
+    });
+
 
     it('displays the cart', () => {
-        console.log('js-test-container present?', !!document.querySelector('.js-test-container'));
-        console.log('js-order-summary present?', document.querySelector('.js-order-summary'));
+        // console.log('js-test-container present?', !!document.querySelector('.js-test-container'));
+        // console.log('js-order-summary present?', document.querySelector('.js-order-summary'));
     
         expect(document.querySelectorAll('.js-cart-item-container').length).toEqual(2);
 
@@ -65,8 +69,18 @@ describe('test suite: renderOrderSummary', () => {
         expect(cart[0].productId).toEqual(productId2);
     }); 
 
-    afterEach(() => {
-        document.querySelector('.js-test-container').innerHTML = '';
+    it('updates the delivery option', () => {
+        document.querySelector(`.js-delivery-option-${productId1}-3`).click();      
+        const input = document.querySelector(`input.js-delivery-option-${productId1}-3`) ;
+        expect(input.checked).toEqual(true);
+
+        expect(cart.length).toEqual(2);
+        expect(cart[0].productId).toEqual(productId1);
+        expect(cart[0].deliveryOptionId).toEqual('3');
+
+        expect(document.querySelector('.js-payment-summary-shipping').innerText).toEqual('$14.98');
+        expect(document.querySelector('.js-payment-summary-total').innerText).toEqual('$63.50');
+
     });
 
 });
