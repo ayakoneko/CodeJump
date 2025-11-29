@@ -37,7 +37,6 @@ class Product {
   extraInfoHTML(){
     return '';
   }
-
 }
 
 class Clothing extends Product {
@@ -53,7 +52,6 @@ class Clothing extends Product {
       <a href="${this.sizeChartLink}" target="_blank">Size Chart </a>
     `;
   }
-
 }
 
 export const products = [
@@ -721,5 +719,3 @@ export const products = [
   } 
   return new Product(productDetails);
 });
-
-console.log(products);
