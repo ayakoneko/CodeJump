@@ -4,8 +4,6 @@ import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import {formatCurrency} from './utils/money.js';
 import {addToCart} from '../data/cart.js';
 
-console.log(orders);
-
 async function loadPage(){
     await loadProductsFetch();
 

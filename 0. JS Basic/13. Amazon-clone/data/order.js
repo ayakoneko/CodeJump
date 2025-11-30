@@ -5,7 +5,7 @@ export function getOrder(orderId){
     orders.forEach((order) => {
         if (order.id === orderId) {
             matchingOrder = order;
-        }
+    }
     });
     return matchingOrder;
 }
@@ -14,7 +14,6 @@ export function getOrder(orderId){
 export function addOrder(order){
     orders.unshift(order);
     saveToStorage();
-    console.log(orders);
 }
 
 function saveToStorage(){
