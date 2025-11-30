@@ -3,7 +3,6 @@ import {products, loadProducts} from '../data/products.js';
 
 loadProducts(renderProductGrid);
 
-
 function renderProductGrid() {
 
     let productsHTML = '';
