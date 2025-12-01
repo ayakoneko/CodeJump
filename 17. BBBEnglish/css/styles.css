@@ -1,0 +1,113 @@
+html{font-size: 100%;}
+body{
+    font-size: 0.9rem;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.1em;
+    color: #333;}
+img{
+    max-width: 100%;
+    vertical-align: bottom;}
+video{width: 100%;}
+a{
+    text-decoration: none;
+    color: #333;}
+ul{padding: 0;}
+li{list-style: none;}
+
+/* Header */
+#header{
+    height: 100px;
+    padding: 40px 0 0 50px;}
+#header .site-title{
+    width: 100px;
+    line-height: 1px;
+    margin: 25px;}
+#header .site-title a{
+    display: block;}
+
+/* Navi - hamburger menu */
+.hamburger{
+    width: 100px;
+    height: 100px;
+    background-color: #ff2a2a;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    cursor: pointer;
+    transition: 0.3s;}
+.hamburger:hover{
+    opacity: 0.7;}
+.hamburger span{
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 25px;
+    transition: 0.3s ease-in-out;}
+.hamburger span:nth-child(1){
+    top: 36px;}
+.hamburger span:nth-child(2){
+    top: 50px;}
+.hamburger span:nth-child(3){
+    top: 64px;}
+.hamburger.active span:nth-child(1){
+    top: 47px;
+    left: 25px;
+    background: #fff;
+    transform: rotate(-45deg);}
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3){
+    top: 47px;
+    background: #fff;
+    transform: rotate(45deg);}
+#navi {
+    width: 100%;
+    height: 100vh;
+    background-color: #ff2a2a;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s ease;}
+#navi.active{
+    opacity: 1;
+    visibility: visible;}
+#navi .logo{
+    position: absolute;
+    width: 100px;
+    top: 40px;
+    left: 50px;}
+#navi .menu{
+    margin: 80px 0 40px 0;}
+#navi .menu li{
+    margin-bottom: 20px;}
+#navi .menu a{
+    color: #fff;
+    font-weight: bold;}
+#navi .btn{
+    width: 250px;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 25px 0;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;}
+#navi .btn::after{
+    content: " ";
+    width: 250px;
+    border-right: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 15px 0;
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+}
+#navi .btn:hover{
+    background-color: #fff;
+    color: #ff2a2a;}
