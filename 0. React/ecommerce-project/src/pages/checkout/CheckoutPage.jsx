@@ -2,7 +2,7 @@ import axios from "axios";
 import dayjs from "dayjs";
 import { useState, useEffect } from "react";
 import { CheckoutHeader } from "./CheckoutHeader";
-import { formatMoeny } from "../../utils/money";
+import { formatMoney } from '../../utils/money';
 import "./CheckoutPage.css";
 
 export function CheckoutPage({ cart }) {
@@ -61,7 +61,7 @@ export function CheckoutPage({ cart }) {
                           {cartItem.product.name}
                         </div>
                         <div className="product-price">
-                          {formatMoeny(cartItem.product.priceCents)}
+                          {formatMoney(cartItem.product.priceCents)}
                         </div>
                         <div className="product-quantity">
                           <span>
@@ -87,7 +87,7 @@ export function CheckoutPage({ cart }) {
                           let priceString = "FREE Shipping";
 
                           if (deliveryOption.priceCents > 0) {
-                            priceString = `${formatMoeny(
+                            priceString = `${formatmoney(
                               deliveryOption.priceCents
                             )} - Shipping`;
                           }
@@ -134,35 +134,35 @@ export function CheckoutPage({ cart }) {
                 <div className="payment-summary-row">
                   <div>Items ({paymentSummary.totalItems}):</div>
                   <div className="payment-summary-money">
-                    {formatMoeny(paymentSummary.productCostCents)}
+                    {formatmoney(paymentSummary.productCostCents)}
                   </div>
                 </div>
 
                 <div className="payment-summary-row">
                   <div>Shipping &amp; handling:</div>
                   <div className="payment-summary-money">
-                    {formatMoeny(paymentSummary.shippingCostCents)}
+                    {formatmoney(paymentSummary.shippingCostCents)}
                   </div>
                 </div>
 
                 <div className="payment-summary-row subtotal-row">
                   <div>Total before tax:</div>
                   <div className="payment-summary-money">
-                    {formatMoeny(paymentSummary.totalCostBeforeTaxCents)}
+                    {formatmoney(paymentSummary.totalCostBeforeTaxCents)}
                   </div>
                 </div>
 
                 <div className="payment-summary-row">
                   <div>Estimated tax (10%):</div>
                   <div className="payment-summary-money">
-                    {formatMoeny(paymentSummary.taxCents)}
+                    {formatmoney(paymentSummary.taxCents)}
                   </div>
                 </div>
 
                 <div className="payment-summary-row total-row">
                   <div>Order total:</div>
                   <div className="payment-summary-money">
-                    {formatMoeny(paymentSummary.totalCostCents)}
+                    {formatmoney(paymentSummary.totalCostCents)}
                   </div>
                 </div>
 
