@@ -23,14 +23,14 @@ export function DeliveryOptions({ deliveryOptions, cartItem, loadCart }) {
         return (
           <div
             key={deliveryOption.id}
-            className="delivery-option"
+            className="delivery-option" data-testid="delivery-option"
             onClick={updateDeliveryOption}
           >
             <input
               type="radio"
               checked={deliveryOption.id === cartItem.deliveryOptionId}
               onChange={() => {}}
-              className="delivery-option-input"
+              className="delivery-option-input" data-testid="delivery-option-input"
               name={`delivery-option-${cartItem.productId}`}
             />
             <div>
@@ -39,7 +39,7 @@ export function DeliveryOptions({ deliveryOptions, cartItem, loadCart }) {
                   "dddd, MMMM D"
                 )}
               </div>
-              <div className="delivery-option-price">{priceString}</div>
+              <div className="delivery-option-price">{' '}{priceString}</div>
             </div>
           </div>
         );
