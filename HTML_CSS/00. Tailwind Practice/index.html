@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --color-chestnut: #973f29;
+        --color-curkey: #b8ddcc;
+      }
+      @layer base {
+        h3 {
+          @apply text-base font-medium tracking-tight text-slate-900 dark:text-white;
+        }
+        p {
+          @apply mt-2 text-sm text-slate-500 dark:text-blue-100;
+        }
+        button {
+          @apply px-4 py-2 text-sm font-medium mt-8 text-blue-900 bg-blue-100 rounded-md;
+        }
+      }
+      @layer component {
+        .card {
+          @apply m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black;
+        }
+      }
+      @utility flex-center {
+        @apply flex justify-center items-center;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="bg-violet-200 h-10 w-full border-2 border-violet-600 rounded-md my-4 p-2"
+    >
+      <h1 class="mt-2 text-center font-mono font-extrabold">Hello World</h1>
+    </div>
+
+    <div class="flex flex-col justify-evenly items-center space-y-6 mt-2">
+      <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+      <div class="h-16 w-16 rounded-full bg-orange-500"></div>
+      <div class="h-16 w-16 rounded-full bg-green-500"></div>
+    </div>
+
+    <div class="grid grid-cols-5 gap-2 mt-6 mx-2">
+      <div class="h-16 rounded-full bg-blue-500"></div>
+      <div class="h-16 rounded-full bg-orange-500"></div>
+      <div class="h-16 rounded-full bg-green-500"></div>
+    </div>
+
+    <div class="max-md:bg-amber-500 max-lg:bg-amber-700">
+      <p class="text-white">I appear on screen wider than 768px</p>
+    </div>
+
+    <div
+      class="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl"
+    >
+      <div class="md:flex">
+        <div class="md:shrink-0">
+          <img
+            class="h-48 w-full object-cover md:h-full md:w-48"
+            src="./building.jpg"
+            alt="Modern building architecture"
+          />
+        </div>
+        <div class="p-8">
+          <div
+            class="text-sm font-semibold tracking-wide text-indigo-500 uppercase"
+          >
+            Company retreats
+          </div>
+          <a
+            href="#"
+            class="mt-1 block text-lg leading-tight font-medium text-black hover:underline"
+          >
+            Incredible accommodation for your team
+          </a>
+          <p class="mt-2 text-gray-500">
+            Looking to take your team away on a retreat to enjoy awesome food
+            and take in some sunshine? We have a list of places to do just that.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white text-black dark:bg-black dark:text-white">
+      Dark mode enabled!
+      <button
+        id="toggleDark"
+        class="px-4 py-2 text-sm font-medium mt-8 text-blue-900 bg-blue-100 rounded-md"
+      >
+        Dark Mode
+      </button>
+    </div>
+
+    <p class="p-[16px] text-[30px] text-chestnut bg-curkey p-2">
+      Chestnut Color
+    </p>
+
+    <button
+      class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 focus:outline-none focus:ring focus:ring-purple-300 active:bg-blue-700 px-6 py-3 rounded-lg text-white font-semibold shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+    >
+      Click Me
+    </button>
+
+    <div class="card flex-center">
+      <h3>Writes Upside-Down</h3>
+
+      <p>
+        The Zero Gravity Pen can be used to write in any orientation, including
+        upside-down. It even works in outer space.
+      </p>
+
+      <button id="toggleDark" onclick="document.body.classList.toggle('dark')">
+        Toggle Dark Mode
+      </button>
+    </div>
+
+    <p class="text-[min(10vw,70px)]">Something Fluid</p>
+
+    <label class="my-4 block">
+        <input 
+            type="file" 
+            class="
+                block w-full text-sm 
+                text-slate-500 
+                file:mr-4 file:rounded-full file:border-0 
+                file:bg-violet-50 file:px-4 file:py-2 
+                file:text-sm file:font-semibold 
+                file:text-violet-700 
+                hover:file:bg-violet-100
+            "
+        >
+    </label>
+<!--     
+    <div class="selection:bg-green-400 selection:text-white">
+        <p>
+            So I started to walk into the water. I won't lie to you boys, I was terrified. 
+            But I pressed on, and as I made my way past the breakers a strange calm came over me. 
+            I don't know if it was divine intervention or the kinship of all living things 
+            but I tell you Jerry at that moment
+    </div> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleDark = document.getElementById("toggleDark");
+
+        toggleDark.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+        });
+      });
+    </script>
+  </body>
+</html>
