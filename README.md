@@ -1,7 +1,15 @@
 # CodeJump 🚀
 
-🌐 **Live Demo (HTML / CSS / Tailwind)**  
-👉 https://code-jump-git-master-ayako-kanekos-projects.vercel.app/
+🌐 **Live Demo**  
+
+- **CodeJump Projects (HTML / CSS / Tailwind)**  
+  👉 https://code-jump-flax.vercel.app/
+
+- **Amazon Clone – JavaScript Version**  
+  👉 https://amazon-javascript.vercel.app/
+
+- **Amazon Clone – React / TypeScript Version**  
+  👉 http://ecommerce-project-react-env.eba-dk4rijff.us-east-1.elasticbeanstalk.com/
 
 CodeJump is a project-based front-end learning repository that demonstrates a clear progression from **HTML & CSS** fundamentals to **JavaScript**, and finally to **React with TypeScript**.  
 It focuses on building responsive user interfaces, interactive applications, and scalable front-end architectures.
