@@ -26,28 +26,41 @@ function render(list) {
   grid.innerHTML = "";
 
   if (!list.length) {
-    grid.innerHTML = `<div class="empty">No projects match your search.</div>`;
+    grid.innerHTML = `
+      <div class="rounded-xl border border-white/15 bg-white/5 p-4 text-slate-100/80">
+        No projects match your search.
+      </div>`;
     return;
   }
 
   for (const p of list) {
     const a = document.createElement("a");
-    a.className = "card";
     a.href = `./${p.folder}/${p.entry || "index.html"}`;
+    a.className = "group block text-slate-50 no-underline";
 
     a.innerHTML = `
-      <div class="thumb">
-        <img src="./thumbnail/${p.img}" alt="${p.title}">
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/25
+        shadow-[0_10px_30px_rgba(0,0,0,0.30)]
+        transition duration-150 group-hover:-translate-y-0.5 group-hover:border-white/20">
+
+        <div class="aspect-[16/10]">
+          <img src="./thumbnail/${p.img}" alt="${escapeHtml(p.title)}"
+            class="h-full w-full object-cover scale-[1.01] transition duration-500 group-hover:scale-[1.07]" />
+        </div>
       </div>
-      <div class="meta">
-        <h3 class="name">${p.title}</h3>
-        <span class="go">↗</span>
+
+      <div class="mt-2.5 flex items-center justify-between px-1">
+        <h3 class="m-0 text-base font-semibold text-slate-50/95">${escapeHtml(p.title)}</h3>
+        <span class="grid h-7 w-7 place-items-center rounded-lg border border-white/10 bg-white/8 text-white/90">
+          ↗
+        </span>
       </div>
     `;
 
     grid.appendChild(a);
   }
 }
+
 
 function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, (m) => ({
