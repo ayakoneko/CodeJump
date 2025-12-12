@@ -1,0 +1,201 @@
+/* =========================
+   Base
+========================= */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #e7eefc;
+
+  background:
+    radial-gradient(60% 80% at 70% 40%, rgba(0,255,120,.25), transparent 60%),
+    linear-gradient(135deg, #07140c, #050b08);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px 40px;
+  background: transparent;
+  color: #eafff3;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero h1 span {
+  color: #3cff7a;
+}
+
+.hero p {
+  max-width: 520px;
+  opacity: 0.85;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 26px;
+}
+
+/* Search in hero */
+#search {
+  width: min(520px, 100%);
+  padding: 16px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(0,0,0,.35);
+  color: #eafff3;
+  font-size: 15px;
+  outline: none;
+}
+
+#search::placeholder {
+  color: rgba(234,255,243,.6);
+}
+
+#search:focus {
+  border-color: #3cff7a;
+  box-shadow: 0 0 0 4px rgba(60,255,122,.15);
+}
+
+/* =========================
+   Layout wrapper for cards
+========================= */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 18px 60px;
+  background: transparent;
+}
+
+/* =========================
+   Section header
+========================= */
+.section-title {
+  margin: 10px 0 18px;
+  font-size: 26px;
+  font-weight: 750;
+  letter-spacing: -0.2px;
+  color: #eafff3;
+}
+
+/* =========================
+   Project grid
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: #eafff3;
+  background: transparent;
+}
+
+.thumb {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.30);
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform .5s ease;
+}
+
+/* Name + arrow under image */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 4px;
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+  opacity: .95;
+}
+
+.go {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.10);
+  opacity: .9;
+}
+
+.card:hover .thumb {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.22);
+}
+
+.card:hover .thumb img {
+  transform: scale(1.07);
+}
+
+/* =========================
+   Empty state
+========================= */
+.empty {
+  opacity: 0.8;
+  padding: 18px;
+  border: 1px dashed rgba(255,255,255,0.18);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+}
+
+/* =========================
+   SP Responsive
+========================= */
+@media (max-width: 520px) {
+  .hero {
+    padding: 64px 16px 34px;
+    min-height: 80vh;
+  }
+
+  .wrap {
+    padding: 22px 16px 50px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .meta {
+    margin-top: 8px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+}
